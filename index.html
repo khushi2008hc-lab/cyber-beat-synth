@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberBeat Synth | 16-Step Web Audio Synthesizer by Khushi</title>
+  <meta name="description" content="Cyberpunk procedural 16-step beat machine and Web Audio DSP synthesizer engineered by Khushi.">
+  <meta name="author" content="Khushi">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="synth-wrapper">
+    <!-- Header -->
+    <header class="synth-header">
+      <div class="header-logo">
+        <i class="fa-solid fa-compact-disc fa-spin text-pink" style="--fa-animation-duration: 8s;"></i>
+        <div>
+          <h1>Cyber<span class="text-accent">Beat</span> Synth</h1>
+          <p class="subtitle">Procedural Web Audio Sequencer • Developed by <a href="https://portfolio-nine-alpha-m0jhu0c4o1.vercel.app" target="_blank" class="dev-link">Khushi</a></p>
+        </div>
+      </div>
+
+      <!-- Live Oscilloscope Display -->
+      <div class="oscilloscope-box">
+        <canvas id="scope-canvas" width="280" height="50"></canvas>
+      </div>
+
+      <div class="synth-controls">
+        <div class="bpm-control">
+          <label><i class="fa-solid fa-gauge-high text-accent"></i> BPM: <span id="bpm-val" class="text-accent">128</span></label>
+          <input type="range" id="bpm-slider" min="70" max="180" value="128" class="styled-range">
+        </div>
+        <button id="play-btn" class="btn btn-primary btn-glow"><i class="fa-solid fa-play"></i> START</button>
+        <button id="clear-btn" class="btn btn-secondary"><i class="fa-solid fa-rotate-left"></i> Reset</button>
+      </div>
+    </header>
+
+    <!-- Preset Selector -->
+    <div class="presets-bar">
+      <span class="preset-label"><i class="fa-solid fa-music text-pink"></i> Factory Presets:</span>
+      <button class="preset-pill active" data-preset="cyberpunk">Cyberpunk 2077</button>
+      <button class="preset-pill" data-preset="synthwave">Retro Synthwave</button>
+      <button class="preset-pill" data-preset="deephouse">Deep Tech House</button>
+    </div>
+
+    <!-- Step Sequencer Grid -->
+    <main class="sequencer-grid">
+      <!-- Tracks dynamically rendered -->
+      <div class="track-row" data-instrument="kick">
+        <div class="track-info">
+          <span class="track-name"><i class="fa-solid fa-drum text-pink"></i> Kick 808</span>
+          <span class="track-freq">55 Hz</span>
+        </div>
+        <div class="steps-container" id="steps-kick"></div>
+      </div>
+
+      <div class="track-row" data-instrument="snare">
+        <div class="track-info">
+          <span class="track-name"><i class="fa-solid fa-circle-dot text-accent"></i> Snare Punch</span>
+          <span class="track-freq">Noise DSP</span>
+        </div>
+        <div class="steps-container" id="steps-snare"></div>
+      </div>
+
+      <div class="track-row" data-instrument="hihat">
+        <div class="track-info">
+          <span class="track-name"><i class="fa-solid fa-ring text-yellow"></i> Hi-Hat Crisp</span>
+          <span class="track-freq">8 kHz</span>
+        </div>
+        <div class="steps-container" id="steps-hihat"></div>
+      </div>
+
+      <div class="track-row" data-instrument="lead">
+        <div class="track-info">
+          <span class="track-name"><i class="fa-solid fa-wave-square text-cyan"></i> Synth Lead</span>
+          <span class="track-freq">Sawtooth</span>
+        </div>
+        <div class="steps-container" id="steps-lead"></div>
+      </div>
+
+      <div class="track-row" data-instrument="bass">
+        <div class="track-info">
+          <span class="track-name"><i class="fa-solid fa-bolt text-purple"></i> Sub Bass</span>
+          <span class="track-freq">Square Sub</span>
+        </div>
+        <div class="steps-container" id="steps-bass"></div>
+      </div>
+    </main>
+
+    <!-- Footer Master Controls -->
+    <footer class="synth-footer">
+      <div class="step-indicator-bar" id="step-indicators"></div>
+      <div class="footer-meta">
+        <span>Web Audio API • Zero Asset Lag • Dynamic DSP Oscillator Chain</span>
+        <span>Crafted by <strong>Khushi</strong></span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
