@@ -2,8 +2,16 @@
 
 A browser-native 16-step drum machine, procedural DSP synthesizer, and real-time canvas oscilloscope visualizer engineered with the Web Audio API.
 
-[![GitHub Profile](https://img.shields.io/badge/Developed_by-Khushi-00F5D4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/khushi2008hc-lab)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Khushi.dev-7928CA?style=for-the-badge)](https://portfolio-nine-alpha-m0jhu0c4o1.vercel.app)
+[![Live on Vercel](https://img.shields.io/badge/Live_Demo-Vercel-00F5D4?style=for-the-badge&logo=vercel&logoColor=black)](https://cyber-beat-synth.vercel.app)
+[![GitHub Profile](https://img.shields.io/badge/Developed_by-Khushi-7928CA?style=for-the-badge&logo=github&logoColor=white)](https://github.com/khushi2008hc-lab)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Khushi.dev-6366F1?style=for-the-badge)](https://portfolio-nine-alpha-m0jhu0c4o1.vercel.app)
+
+---
+
+## 🚀 Live Demo & Deployment
+
+- **Live Deployment on Vercel:** [https://cyber-beat-synth.vercel.app](https://cyber-beat-synth.vercel.app)
+- **Source Code Repository:** [https://github.com/khushi2008hc-lab/cyber-beat-synth](https://github.com/khushi2008hc-lab/cyber-beat-synth)
 
 ---
 
